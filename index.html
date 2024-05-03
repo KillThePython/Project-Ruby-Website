@@ -5,9 +5,35 @@
     <title>RubyAI</title>
     <link rel="stylesheet" type="text/css" href="styles-index.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script src="script.js"></script>
 </head>
 <body>
-<button onclick="changeBackgroundImage()">Change Background Image</button>
-<script src="script.js"></script>
+<div class="theme-button">
+    <button onclick="changeBackgroundImage()" class="background-change">Next Theme</button>
+</div>
+<div id="clock-container"></div><br><br>
+
+<script>
+    // Existing script content from script.js (if any)
+
+    function displayClock() {
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1; // Months are 0-indexed
+        const day = date.getDate();
+        const weekday = date.toLocaleDateString('en-US', { weekday: 'long'});
+        const hours = date.getHours().toString().padStart(2, '0'); // Add leading zero
+        const minutes = date.getMinutes().toString().padStart(2, '0');
+        const seconds = date.getSeconds().toString().padStart(2, '0');
+
+        const formattedTime = `<b>${weekday}<br>${month}/${day}/${year}<br>${hours}:${minutes}:${seconds}</b>`;
+        document.getElementById('clock-container').innerHTML = formattedTime;
+    }
+
+    // Call the displayClock function initially and then every second
+    displayClock();
+    setInterval(displayClock, 1000);
+</script>
+<img src="assets/discord.png" width="45" height="34">
 </body>
 </html>
