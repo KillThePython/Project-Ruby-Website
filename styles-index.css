@@ -8,7 +8,9 @@ body {
 }
 
 .theme-button {
-    margin-left: 91.48%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .background-change {
@@ -39,5 +41,109 @@ body {
     color: white;
     font-size: xx-large;
     font-style: normal;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.discord:hover {
+    animation: tilt-n-move-shaking 1s infinite;
+}
+
+.whatsapp {
+    border-radius: 18px;
+}
+
+.whatsapp:hover {
+    animation: tilt-n-move-shaking 1s infinite;
+}
+
+.instagram {
+    border-radius: 18px;
+}
+
+.instagram:hover {
+    animation: tilt-n-move-shaking 1s infinite;
+}
+
+.facebook {
+    border-radius: 18px;
+}
+
+.facebook:hover {
+    animation: tilt-n-move-shaking 1s infinite;
+}
+
+.youtube {
+    border-radius: 18px;
+}
+
+.youtube:hover {
+    animation: tilt-n-move-shaking 1s infinite;
+}
+
+.twitter-div {
+    background-color: white;
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.twitter-div:hover {
+    animation: tilt-n-move-shaking 1s infinite;
+}
+
+.apps {
+    position: absolute;
+    top: 25%;
+    left: 10px;
+}
+
+.Greetings {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    font-size: xxx-large;
+    background: linear-gradient(
+            to right,
+            #7953cd 20%,
+            #00affa 30%,
+            #0190cd 70%,
+            #764ada 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.telegram {
+    border-radius: 18px;
+}
+
+.telegram:hover {
+    animation: tilt-n-move-shaking 1s infinite;
+}
